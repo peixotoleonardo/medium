@@ -11,13 +11,15 @@ describe('CreateUserUseCase', () => {
     faker.name.fullName(),
     faker.internet.email(),
   );
-  let usecase = new CreateUserUseCase(repositoryMock);
+
+  let usecase: CreateUserUseCase;
 
   beforeEach(() => {
     jest.useFakeTimers();
 
     repositoryMock = {
       save: jest.fn().mockResolvedValue(new User(input.name, input.email)),
+      findById: jest.fn(),
     };
 
     usecase = new CreateUserUseCase(repositoryMock);
