@@ -1,6 +1,6 @@
 import { EntitySchema } from 'typeorm';
 
-import { BaseEntitySchema } from '@app/common/schema/base-entity.schema';
+import { BaseEntitySchema } from '@app/common/infra/schema/base-entity.schema';
 import { Article } from '@medium/domain/entities/article';
 import { User } from '@medium/domain/entities/user';
 

@@ -1,6 +1,6 @@
 import { EntitySchema } from 'typeorm';
 
-import { BaseEntitySchema } from '@app/common/schema/base-entity.schema';
+import { BaseEntitySchema } from '@app/common/infra/schema/base-entity.schema';
 import { Tag } from '@medium/domain/entities/tag';
 
 export const TagSchema = new EntitySchema<Tag>({
