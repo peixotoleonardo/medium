@@ -6,8 +6,8 @@ import { CrateTagUseCase } from '@medium/domain/use-cases/tags/create/create-tag
 import { CreateUserUseCase } from '@medium/domain/use-cases/users/create/create-user.use-case';
 import { FindUserByIdUseCase } from '@medium/domain/use-cases/users/find-by-id/find-user-by-id.use-case';
 import { ArticleRepository } from '@medium/infra/typeorm/repositories/article.repository';
-import { UserRepository } from '@medium/infra/typeorm/repositories/user.repository';
 import { TagRepository } from '@medium/infra/typeorm/repositories/tag.repository';
+import { UserRepository } from '@medium/infra/typeorm/repositories/user.repository';
 
 export const providers: Provider[] = [
   {
@@ -25,7 +25,7 @@ export const providers: Provider[] = [
   {
     provide: CrateTagUseCase,
     useFactory: (repository: TagRepository) => new CrateTagUseCase(repository),
-    inject: [TagRepository]
+    inject: [TagRepository],
   },
   {
     provide: CreateArticleUseCase,

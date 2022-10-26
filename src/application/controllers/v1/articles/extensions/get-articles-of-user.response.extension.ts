@@ -20,10 +20,10 @@ Paginate.prototype.toGetArticlesOfUserResponse =
       this.items.map(
         (article: ArticleDomain) =>
           new Article(
-            article.id, 
-            article.title, 
+            article.id,
+            article.title,
             article.body,
-            article.tags?.map(tag => tag.value),
+            article.tags?.map((tag) => tag.value),
           ),
       ),
       this.nextPage,

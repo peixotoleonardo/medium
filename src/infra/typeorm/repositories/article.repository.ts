@@ -35,7 +35,7 @@ export class ArticleRepository
       .leftJoinAndSelect('article.tags', 'tag')
       .take(take)
       .skip((page - 1) * take)
-      
+
       .getManyAndCount();
 
     return new Paginate(articles, total, page, take);

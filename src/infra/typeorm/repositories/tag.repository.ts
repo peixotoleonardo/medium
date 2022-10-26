@@ -17,7 +17,7 @@ export class TagRepository
 
   findByValue(values: string[]): Promise<Tag[]> {
     return this.repository.find({
-      where: values.map(value => ({ value })),
+      where: values.map((value) => ({ value })),
     });
   }
 }

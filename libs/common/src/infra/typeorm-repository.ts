@@ -14,10 +14,10 @@ export abstract class TypeOrmRepository<T extends BaseEntity>
     if (Array.isArray(entityOrEntities)) {
       return this.repository.save(entityOrEntities);
     }
-    
+
     return this.repository.save(entityOrEntities as T);
   }
-  
+
   findById(id: number): Promise<T> {
     return this.repository.findOneBy({ id } as FindOptionsWhere<T>);
   }
