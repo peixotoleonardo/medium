@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { CreateArticleController } from '@medium/application/controllers/v1/articles/create-article.controller';
 import { createArticleRequestFactory } from '@medium/application/controllers/v1/articles/requests/__mocks__/create-article.request.factory';
 import { CreateArticleResponse } from '@medium/application/controllers/v1/articles/responses/create-article.response';
-import { UserByIdPipe } from '@medium/application/pipe/user-by-id.pipe';
+import { GetUserByIdPipe } from '@medium/application/pipe/get-user-by-id.pipe';
 import { userFactory } from '@medium/domain/entities/__mocks__/user.factory';
 import { CreateArticleUseCase } from '@medium/domain/use-cases/articles/create/create-article.use-case';
 
@@ -17,7 +17,7 @@ describe('CreateArticleController', () => {
       controllers: [CreateArticleController],
       providers: [CreateArticleUseCase],
     })
-      .overridePipe(UserByIdPipe)
+      .overridePipe(GetUserByIdPipe)
       .useValue(jest.fn())
       .compile();
   });

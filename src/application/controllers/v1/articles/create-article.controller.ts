@@ -5,7 +5,7 @@ import '@medium/application/controllers/v1/articles/extensions/create-article.re
 import '@medium/application/controllers/v1/articles/extensions/create-article.response.extension';
 
 import { CreateArticleRequest } from '@medium/application/controllers/v1/articles/requests/create-article.request';
-import { UserByIdPipe } from '@medium/application/pipe/user-by-id.pipe';
+import { GetUserByIdPipe } from '@medium/application/pipe/get-user-by-id.pipe';
 import { User } from '@medium/domain/entities/user';
 import { CreateArticleUseCase } from '@medium/domain/use-cases/articles/create/create-article.use-case';
 
@@ -16,7 +16,7 @@ export class CreateArticleController {
 
   @Post()
   async create(
-    @Param('id', UserByIdPipe) user: User,
+    @Param('id', GetUserByIdPipe) user: User,
     @Body() request: CreateArticleRequest,
   ) {
     const article = await this.usecase.execute(
