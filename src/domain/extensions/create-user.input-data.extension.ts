@@ -7,6 +7,7 @@ declare module '@medium/domain/use-cases/users/create/create-user.input-data' {
   }
 }
 
+/* istanbul ignore next */
 CreateUserInputData.prototype.toUser =
   CreateUserInputData.prototype.toUser ??
   function (): User {
