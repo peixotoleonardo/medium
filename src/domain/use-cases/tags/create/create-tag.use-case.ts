@@ -1,7 +1,7 @@
 import { Tag } from '@medium/domain/entities/tag';
 import { ITagRepository } from '@medium/domain/repositories/tag.repository';
 
-export class CrateTagUseCase {
+export class CreateTagUseCase {
   constructor(private repository: ITagRepository) {}
 
   async execute(tags: string[] = []): Promise<Tag[]> {
