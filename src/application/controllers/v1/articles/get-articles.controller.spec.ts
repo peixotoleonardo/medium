@@ -1,17 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { Paginate } from '@app/common/domain/paginate';
 import { GetArticlesOfUserController } from '@medium/application/controllers/v1/articles/get-articles.controller';
 import { GetArticlesOfUserResponse } from '@medium/application/controllers/v1/articles/responses/get-articles-of-user.response';
 import { GetArticlesOfUserUseCase } from '@medium/domain/use-cases/articles/get-articles-of-user/get-articles-of-user.use-case';
 
 jest.mock(
   '@medium/domain/use-cases/articles/get-articles-of-user/get-articles-of-user.use-case',
-  () => ({
-    GetArticlesOfUserUseCase: jest.fn().mockImplementation(() => ({
-      execute: jest.fn().mockResolvedValue(new Paginate([], 0, 1, 1)),
-    })),
-  }),
 );
 
 describe('GetArticlesOfUserController', () => {
