@@ -2,9 +2,9 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUserResponse {
   @ApiProperty()
-  readonly id: string;
+  readonly id: number;
 
-  constructor(id: string) {
+  constructor(id: number) {
     this.id = id;
   }
 }
