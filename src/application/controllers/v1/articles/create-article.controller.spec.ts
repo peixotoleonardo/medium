@@ -5,18 +5,10 @@ import { CreateArticleController } from '@medium/application/controllers/v1/arti
 import { CreateArticleRequest } from '@medium/application/controllers/v1/articles/requests/create-article.request';
 import { CreateArticleResponse } from '@medium/application/controllers/v1/articles/responses/create-article.response';
 import { UserByIdPipe } from '@medium/application/pipe/user-by-id.pipe';
-import { articleFactory } from '@medium/domain/entities/__mocks__/article.factory';
 import { userFactory } from '@medium/domain/entities/__mocks__/user.factory';
 import { CreateArticleUseCase } from '@medium/domain/use-cases/articles/create/create-article.use-case';
 
-jest.mock(
-  '@medium/domain/use-cases/articles/create/create-article.use-case',
-  () => ({
-    CreateArticleUseCase: jest.fn().mockImplementation(() => ({
-      execute: jest.fn().mockResolvedValue(articleFactory()),
-    })),
-  }),
-);
+jest.mock('@medium/domain/use-cases/articles/create/create-article.use-case');
 
 describe('CreateArticleController', () => {
   let module: TestingModule;
