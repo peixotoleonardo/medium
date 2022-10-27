@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { EntitySchema } from 'typeorm';
 
 import { BaseEntitySchema } from '@app/common/infra/schema/base-entity.schema';

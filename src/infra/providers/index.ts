@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Provider } from '@nestjs/common';
 
 import { factoryProvider } from '@app/common/utils/factory-provider';

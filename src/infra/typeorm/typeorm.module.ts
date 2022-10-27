@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Module } from '@nestjs/common';
 import { TypeOrmModule as TypeOrm } from '@nestjs/typeorm';
 
