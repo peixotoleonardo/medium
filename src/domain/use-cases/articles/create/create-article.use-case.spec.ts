@@ -1,6 +1,6 @@
 import { tagFactory } from '@medium/domain/entities/__mocks__/tag.factory';
 import { Article } from '@medium/domain/entities/article';
-import { ArticleRepository } from '@medium/domain/repositories/__mocks__/article';
+import { ArticleRepository } from '@medium/domain/repositories/__mocks__/article.repository';
 import { createArticleInputDataFactory } from '@medium/domain/use-cases/articles/create/__mocks__/create-article.input-data';
 import { CreateArticleUseCase } from '@medium/domain/use-cases/articles/create/create-article.use-case';
 import { CrateTagUseCase } from '@medium/domain/use-cases/tags/create/__mocks__/create-tag.use-case';

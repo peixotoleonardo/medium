@@ -1,4 +1,4 @@
-import { ArticleRepository } from '@medium/domain/repositories/__mocks__/article';
+import { ArticleRepository } from '@medium/domain/repositories/__mocks__/article.repository';
 import { GetArticlesOfUserUseCase } from '@medium/domain/use-cases/articles/get-articles-of-user/get-articles-of-user.use-case';
 
 describe('GetArticlesOfUserUseCase', () => {
