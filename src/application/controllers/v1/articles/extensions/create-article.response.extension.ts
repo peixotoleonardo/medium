@@ -7,6 +7,7 @@ declare module '@medium/domain/entities/article' {
   }
 }
 
+/* istanbul ignore next */
 Article.prototype.toCreateArticleResponse =
   Article.prototype.toCreateArticleResponse ??
   function () {

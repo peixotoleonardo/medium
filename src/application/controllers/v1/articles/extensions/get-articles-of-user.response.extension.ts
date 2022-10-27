@@ -13,6 +13,7 @@ declare module '@app/common/domain/paginate' {
   }
 }
 
+/* istanbul ignore next */
 Paginate.prototype.toGetArticlesOfUserResponse =
   Paginate.prototype.toGetArticlesOfUserResponse ??
   function () {

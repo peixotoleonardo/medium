@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { registerAs } from '@nestjs/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import Joi from 'joi';

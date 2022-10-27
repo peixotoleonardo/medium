@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Global, Module } from '@nestjs/common';
 
 import { providers, providersToExport } from '@medium/infra/providers';

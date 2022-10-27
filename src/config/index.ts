@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import Joi from 'joi';
 
 import appConfig, {

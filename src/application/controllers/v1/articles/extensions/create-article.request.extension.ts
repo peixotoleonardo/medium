@@ -8,6 +8,7 @@ declare module '@medium/application/controllers/v1/articles/requests/create-arti
   }
 }
 
+/* istanbul ignore next */
 CreateArticleRequest.prototype.toCreateArticleInputData =
   CreateArticleRequest.prototype.toCreateArticleInputData ??
   function (user: User) {

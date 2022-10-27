@@ -7,6 +7,7 @@ declare module '@medium/domain/entities/user' {
   }
 }
 
+/* istanbul ignore next */
 User.prototype.toCreateUserResponse =
   User.prototype.toCreateUserResponse ??
   function () {

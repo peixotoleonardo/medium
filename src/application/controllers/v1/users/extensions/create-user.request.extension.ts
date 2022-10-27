@@ -7,6 +7,7 @@ declare module '@medium/application/controllers/v1/users/requests/create-user.re
   }
 }
 
+/* istanbul ignore next */
 CreateUserRequest.prototype.toCreateUserInputData =
   CreateUserRequest.prototype.toCreateUserInputData ??
   function () {
