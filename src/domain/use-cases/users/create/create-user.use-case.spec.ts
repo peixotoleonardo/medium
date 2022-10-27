@@ -1,28 +1,17 @@
-import { faker } from '@faker-js/faker';
-
 import { User } from '@medium/domain/entities/user';
+import { UserRepository } from '@medium/domain/repositories/__mocks__/user.repository';
 import { IUserRepository } from '@medium/domain/repositories/user.repository';
-import { CreateUserInputData } from '@medium/domain/use-cases/users/create/create-user.input-data';
+import { createUserInputDataFactory } from '@medium/domain/use-cases/users/create/__mocks__/create-user.input-data';
 import { CreateUserUseCase } from '@medium/domain/use-cases/users/create/create-user.use-case';
 
 describe('CreateUserUseCase', () => {
-  let repositoryMock: IUserRepository;
-  const input = new CreateUserInputData(
-    faker.name.fullName(),
-    faker.internet.email(),
-  );
-
   let usecase: CreateUserUseCase;
+  let userRepositoryMock: IUserRepository;
 
   beforeEach(() => {
     jest.useFakeTimers();
-
-    repositoryMock = {
-      save: jest.fn().mockResolvedValue(new User(input.name, input.email)),
-      findById: jest.fn(),
-    };
-
-    usecase = new CreateUserUseCase(repositoryMock);
+    userRepositoryMock = new UserRepository();
+    usecase = new CreateUserUseCase(userRepositoryMock);
   });
 
   afterEach(() => {
@@ -31,13 +20,17 @@ describe('CreateUserUseCase', () => {
 
   describe('execute', () => {
     it('should return a User instance', () => {
-      expect(usecase.execute(input)).resolves.toBeInstanceOf(User);
+      expect(
+        usecase.execute(createUserInputDataFactory()),
+      ).resolves.toBeInstanceOf(User);
     });
 
     it('should call "IUserRepository.save" with an user instance', async () => {
+      const input = createUserInputDataFactory();
+
       await usecase.execute(input);
 
-      expect(repositoryMock.save).toHaveBeenNthCalledWith(
+      expect(userRepositoryMock.save).toHaveBeenNthCalledWith(
         1,
         new User(input.name, input.email),
       );
