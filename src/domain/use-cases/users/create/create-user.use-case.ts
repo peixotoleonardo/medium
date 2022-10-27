@@ -1,4 +1,4 @@
-import '@medium/domain/extensions/create-user.input-data';
+import '@medium/domain/extensions/create-user.input-data.extension';
 
 import { User } from '@medium/domain/entities/user';
 import { IUserRepository } from '@medium/domain/repositories/user.repository';
