@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateUseResponse {
+export class CreateUserResponse {
   @ApiProperty()
   readonly id: string;
 
