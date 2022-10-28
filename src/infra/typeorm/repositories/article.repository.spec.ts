@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 
 import { Paginate } from '@app/common/domain/paginate';
-import { AppConfig } from '@app/common/setup/config/app.config';
+import { AppConfig } from '@app/common/infra/config/app.config';
 import { articleFactory } from '@medium/domain/entities/__mocks__/article.factory';
 import { Article } from '@medium/domain/entities/article';
 import { ArticleRepository } from '@medium/infra/typeorm/repositories/article.repository';

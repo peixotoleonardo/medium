@@ -3,13 +3,13 @@ import Joi from 'joi';
 
 import appConfig, {
   AppConfigSchema,
-} from '@app/common/setup/config/app.config';
+} from '@app/common/infra/config/app.config';
 import swaggerConfig, {
   SwaggerConfigSchema,
-} from '@app/common/setup/config/swagger.config';
+} from '@app/common/infra/config/swagger.config';
 import typeOrmConfig, {
   TypeOrmConfigSchema,
-} from '@medium/config/typeorm.config';
+} from '@medium/infra/config/typeorm.config';
 
 export const config = [appConfig, swaggerConfig, typeOrmConfig];
 

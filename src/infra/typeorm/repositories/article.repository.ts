@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Paginate } from '@app/common/domain/paginate';
+import { AppConfig } from '@app/common/infra/config/app.config';
 import { TypeOrmRepository } from '@app/common/infra/typeorm-repository';
-import { AppConfig } from '@app/common/setup/config/app.config';
 import { Article } from '@medium/domain/entities/article';
 import { IArticleRepository } from '@medium/domain/repositories/article.repository';
 

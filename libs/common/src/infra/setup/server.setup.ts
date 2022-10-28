@@ -1,6 +1,6 @@
 import { INestApplication, Logger, ValidationPipe } from '@nestjs/common';
 
-import { AppConfig } from '@app/common/setup/config/app.config';
+import { AppConfig } from '@app/common/infra/config/app.config';
 
 export const serverSetup = async (app: INestApplication) => {
   const config = app.get<AppConfig>(AppConfig);
